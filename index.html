@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width", initial-scale="1.0" />
+        <script src="main.js"></script>
+        <title>Dashboard</title>
+        <link rel="stylesheet  href="css/bootstrap.min.css>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/4f5b7c629e.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    </head>
+    
+    
+    <body>
+
+
+<!--navigation bar-->
+        <nav class="container1">
+            <div class="nav">
+                <ul>
+                    <li>
+                        <a href="#">
+                        <span class="icon brand-name"><i class="fa-brands fa-apple"></i></span>
+                        <span class="title"><h2>DrD</h2></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="material-symbols-outlined">
+                                dashboard
+                                </span>
+                        <span class="title" style="padding-left:15px ;">Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <span class="icon"><i class="fa-solid fa-user"></i></span>
+                        <span class="title">Customers</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <span class="icon"><span class="material-symbols-outlined">
+                            monitoring
+                            </span></span>
+                        <span class="title">Analytics</span> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <span class="icon"><i class="fa-solid fa-message"></i></span>
+                        <span class="title">Messages</span>
+                        <span class="msg-count">15</span> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <span class="icon"><i class="fa-solid fa-circle-info"></i></span>
+                        <span class="title">Help</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <span class="icon"><i class="fa-solid fa-gear"></i></span>
+                        <span class="title">Settings</span>
+                        </a>-
+                    </li>
+                    <li>
+                        <a href="#">
+                        <span class="icon"><i class="fa-solid fa-right-from-bracket"></i></span>
+                        <span class="title">Log Out</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+<!--main part-->
+
+<div class="main">
+    <div class="topBar">
+        <div class="toggle" onclick="toggleMenu()"><i class="fa-sharp fa-solid fa-bars"></i></div>
+            <div class="search">
+                <label>
+                    <input type="text" placeholder="Search">
+                    <i class="fa-brands fa-searchengin"></i>
+                </label>
+            </div>
+                    <div class="user">
+                        <div>
+                        <img src="userPic.webp">
+                        <span class="userName">Youssef <span class="admin">admin</span></span>
+
+                        </div>
+                </div>
+    </div>
+
+
+<!--cards-->
+
+
+<div class="container">
+    <div class="row">
+        <div class="card">
+        <div class="col-3">
+            <div class="iconBox">
+                <i class="fa-solid fa-eye"></i>
+            </div>
+            <div class="numbers">2,150</div>
+            <div class="cardName">Daily Views</div>
+            <div class="progress">
+                <svg>
+                    <circle cx="38" cy="38" r="36" id="daily"></circle>
+                </svg>
+            <div id="number-view">80%</div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="col-3">
+            <div class="iconBox">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <div class="numbers">150</div>
+            <div class="cardName">Sales</div>
+            <div class="progress">
+                <svg>
+                    <circle cx="38" cy="38" r="36" id="sales"></circle>
+                </svg>
+                <div id="number-sale">50%</div>
+            </div>
+        </div>
+        </div>
+    
+        <div class="card">
+        <div class="col-3">
+            <div class="iconBox">
+                <i class="fa-solid fa-comment"></i>
+            </div>
+            <div class="numbers">1,200</div>
+            <div class="cardName">Comments</div>
+            <div class="progress">
+                <svg>
+                    <circle cx="38" cy="38" r="36" id="comment"></circle>
+                </svg>
+                <div id="number-com">97%</div>
+            </div>
+        </div>
+        </div>
+    
+        <div class="card">
+    <div class="col-3">
+        <div class="iconBox">
+            <i class="fa-solid fa-thumbs-up"></i>
+        </div>
+            <div class="numbers">1,750</div>
+            <div class="cardName">Likes</div>
+            <div class="progress">
+                <svg>
+                    <circle cx="38" cy="38" r="36" id="like"></circle>
+                </svg=>
+                <div id="number-like">65%</div>
+        </div>
+    </div>
+    </div>
+    
+    <div class="card">
+    <div class="col-3">
+        <div class="iconBox">
+            <i class="fa-solid fa-dollar-sign"></i>
+            </div>
+            <div class="numbers">$10,150</div>
+            <div class="cardName">Earnings</div>
+            <div class="progress">
+                <svg>
+                    <circle cx="38" cy="38" r="36" id="earning"></circle>
+                </svg>
+                <div id="number-earn">40%</div>
+                
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+
+
+    <div class="details">
+    <div class="recentOrders">
+        <div class="cardHead">
+            <h2>Recent Orders</h2>
+        <table>
+            <thead>
+                    <td>Name</td>
+                    <td>Price</td>
+                    <td>Payment</td>
+                    <td>Status</td>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Window Coolers</td>
+                    <td>$110</td>
+                    <td>Due</td>
+                    <td><span class="status-pend">Pending</span></td>
+                </tr>
+                <tr>
+                    <td>Speakers</td>
+                    <td>$350</td>
+                    <td>Paid</td>
+                    <td><span class="status-return">Return</span></td>
+                </tr>
+                <tr>
+                    <td>Dell Laptop</td>
+                    <td>$1,700</td>
+                    <td>Due</td>
+                    <td><span class="status-prog">In Progress</span></td>
+                </tr>
+                <tr>
+                    <td>Microphones</td>
+                    <td>$500</td>
+                    <td>Due</td>
+                    <td><span class="status-prog">In Progress</span></td>
+                </tr>
+                <tr>
+                    <td>Keyboards</td>
+                    <td>$300</td>
+                    <td>Due</td>
+                    <td><span class="status-prog">In Progress</span></td>
+                </tr>
+                <tr>
+                    <td>Batteries</td>
+                    <td>$950</td>
+                    <td>Due</td>
+                    <td><span class="status-prog">In Progress</span></td>
+                </tr>
+                <tr>
+                    <td>Led Screens</td>
+                    <td>$3,200</td>
+                    <td>Due</td>
+                    <td><span class="status-pend">Pending</span></td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="#" class="button1">View All</a>
+    </div>
+    
+        <div class="display">
+    <div class="recentCustomers">
+        <div class="cardHead">
+        <h2>Recent Customers</h2>
+    </div>
+        <div class="message">
+
+        <p> <img src="afsha.jpg" alt="MO Afsha" width="50px" height="50px"> <b> MO Afsha</b> received his items  <span class="material-symbols-outlined" style="color: green;">
+            check_circle
+            </span> <span>2min ago</span></p>
+            
+        <p> <img src="shenawi.jpg" alt="MO Shenawi" width="50px" height="50px"> <b> MO Shenawi</b> received his items <span class="material-symbols-outlined" style="color: green;">
+            check_circle
+            </span> <span>10min ago</span></p>
+            
+        <p> <img src="y-ibra.jpg" alt="Yasser ibrahim" width="50px" height="50px"> <b> Yasser Ibrahim</b> didn't receive his items <span class="material-symbols-outlined" style="color: red;">
+            cancel
+            </span> <span>10hr ago</span></p>
+            
+        <p> <img src="p-tau.png" alt="Percy Tau" width="50px" height="50px"> <b>Percy Tau</b> didn't receive his items <span class="material-symbols-outlined" style="color: red;">
+            cancel
+            </span> <span>1day ago</span></p>
+            <a href="#" class="button2">View All</a>
+        </div>
+    </div>
+
+    
+    <div class="Analytics">
+        <div class="cardHead">
+        <h2>Analytics <span class="icon"><span class="material-symbols-outlined">
+            monitoring
+            </span></span><span class="analytic-time">last 24 hours</span></h2>
+            <div class="items">
+            <div class="offline"><span class="material-symbols-outlined">
+                local_shipping
+                </span> <h5>OFFLINE items</h5>
+            </div>
+                <span class="percent-">-7%</span> 
+                <span class="quantity">60</span>
+            </div>
+            <div class="items">
+            <div class="online"><span class="material-symbols-outlined">
+                shopping_cart_checkout
+                </span> <h5>ONLINE items</h5>
+            </div>
+                <span class="percent-pos">+37%</span> 
+                <span class="quantity">212</span>
+        </div>
+        <div class="items">
+            <div class="customer"><span class="material-symbols-outlined">
+                person
+                </span> <h5>New Customer</h5>
+            </div>
+                <span class="percent-pos">+18%</span> 
+                <span class="quantity">260</span>
+            </div>
+            <button class="btn"><span class="material-symbols-outlined">
+                add
+                </span>Add Products</button>
+            </div>
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+
+
+
+        <script>
+            function toggleMenu() {
+                let toggle = document.querySelector(`.toggle`);
+                let nav = document.querySelector(`.nav`);
+                let main = document.querySelector(`.main`);
+                toggle.classList.toggle(`active`);
+                nav.classList.toggle(`active`);
+                main.classList.toggle(`active`);
+            }
+            let view= document.getElementById('number-view');
+            let sale=document.getElementById('number-sale');
+            let comment=document.getElementById('number-com');
+            let like=document.getElementById('number-like');
+            let earn=document.getElementById('number-earn');
+            let counterv= 0;
+            let counters= 0;
+            let counter1= 0;
+            let counter= 0;
+            let countere= 0;
+            setInterval(() =>{
+                if(counterv==80){clearInterval();}
+                else{counterv +=1;
+                view.innerHTML = counterv+"%";
+                }
+            }, 5);
+            setInterval(() =>{
+                if(counters==50){clearInterval();}
+                else{counters +=1;
+                sale.innerHTML = counters+"%";
+                }
+            }, 15);
+                        setInterval(() =>{
+                if(countere==40){clearInterval();}
+                else{countere +=1;
+                earn.innerHTML = countere+"%";
+                }
+            }, 17);
+            setInterval(() =>{
+                if(counter==65){clearInterval();}
+                else{counter +=1;
+                like.innerHTML = counter+"%";
+                }
+            }, 16);
+            
+            setInterval(() =>{
+                if(counter1==97){clearInterval();}
+                else{counter1 +=1;
+                comment.innerHTML = counter1+"%";
+                }
+            }, 1.5);
+        
+        
+        
+        
+        </script>
+
+        <script src="js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/4f5b7c629e.js" crossorigin="anonymous"></script>
+    </body>
+</html>
