@@ -471,10 +471,6 @@ padding-right: 10em;
 /* media query for Large devices (laptops/desktops, 992px and up) */
 
 @media screen and (max-width:992px) {
-body 
-{
-    background: red;
-}
 .container1 .nav
 {
     width: 50px;
